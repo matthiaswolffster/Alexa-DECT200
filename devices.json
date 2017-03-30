@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Lichterkette",
+        "deviceType": "switch",
+        "offUrl": "[{\"item\":\"/home/pi/alde/al_lichterkette.sh setswitchoff\",\"type\":\"cmdDevice\"}]",
+        "onUrl": "[{\"item\":\"/home/pi/alde/al_lichterkette.sh setswitchon\",\"type\":\"cmdDevice\"}]"
+    },
+    {
+        "name": "radioeins",
+        "deviceType": "switch",
+        "dimUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh dim ${intensity.percent}\",\"type\":\"cmdDevice\"}]",
+        "offUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh off\",\"type\":\"cmdDevice\"}]",
+        "onUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh radio 4716 radioeins\",\"type\":\"cmdDevice\"}]"
+    },
+    {
+        "name": "radio eins",
+        "description": "Alexa understands either 'radioeins' or 'radio eins'",
+        "deviceType": "switch",
+        "dimUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh dim ${intensity.percent}\",\"type\":\"cmdDevice\"}]",
+        "offUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh off\",\"type\":\"cmdDevice\"}]",
+        "onUrl": "[{\"item\":\"/home/pi/alde/al_soundtouch.sh radio 4716 radioeins\",\"type\":\"cmdDevice\"}]"
+    },
+    {
+        "name": "Computer",
+        "description": "VideoPC",
+        "deviceType": "switch",
+        "onUrl": "[{\"item\":\"/home/pi/alde/al_PC.sh on\",\"type\":\"cmdDevice\"}]",
+        "offUrl": "[{\"item\":\"/home/pi/alde/al_PC.sh off\",\"type\":\"cmdDevice\"}]"
+    }
+]
