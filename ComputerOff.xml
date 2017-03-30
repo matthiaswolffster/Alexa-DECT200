@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="1722" Guid="{C6FE48A6-4342-44F5-B816-FA6FF699A275}" Time="1490732617.73">
+    <Autostart Name="Autostart" Expanded="True">
+        <Plugin Identifier="DynamicWebserver" Guid="{2FC713FF-0093-4271-A520-F0F6BB05A0E8}" File="DynamicWebserver">
+            gAIoWAQAAABIVFRQcQBNlR9YKQAAAEM6XFVzZXJzXE1hdHRoaWFzXERvY3VtZW50c1xldmVudEdob3N0d3d3cQFYCgAAAEV2ZW50R2hvc3RxAlgAAAAAcQNoA3RxBC4=
+        </Plugin>
+    </Autostart>
+    <Macro Name="ComputerOff" Expanded="True">
+        <Event Name="HTTP.mwoComputerOff" />
+        <Action Name="Starte Anwendung: hibernate">
+            System.Execute(u'C:\\Windows\\System32\\shutdown.exe', u'/h', 0, False, 3, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+</EventGhost>
