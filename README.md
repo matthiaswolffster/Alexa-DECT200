@@ -5,7 +5,7 @@ This is a collection of
 - bash shell scripts, 
 - a json file for ha-bridge 
 - raspberry pi (rpi) config files
-- an EventGhost xml file
+- an [EventGhost](http://www.eventghost.org/) xml file
 
 ## The environment
 - Amazon Echo smart speaker
@@ -13,17 +13,19 @@ This is a collection of
 - Fritz!DECT 200 smart plug
 - Fritz!Box 6490 WLAN router
 - Bose Soundtouch 30 wireless speaker
-- PC with Windows 10 OS
+- PC with Windows 10 OS and EventGhost
 
-# Bash shell scripts used
+ha-bridge is configured to advertise the following smart home devices: "Lichterkette", "radioeins" and "Computer". The json file "devices.json" is used to configure ha-bridge.
 
-Device | Script | runs on
--------|-------|----
-Amazon Echo smart speaker | n/a | n/a
-Raspberry Pi 3 with Jessie OS | n/a | n/a
-Fritz!DECT 200 smart plug | al_lichterkette.sh | rpi
-Fritz!Box 6490 WLAN router | fritzbox_create_sid.sh | rpi
-Bose Soundtouch 30 wireless speaker | al_soundtouch.sh | rpi
-PC with Windows 10 OS | al_PC.sh | rpi
+## Bash shell scripts used
+
+Device controlled | Script 
+-------|-----
+Fritz!DECT 200 smart plug | al_lichterkette.sh 
+Fritz!Box 6490 WLAN router | fritzbox_create_sid.sh 
+Bose Soundtouch 30 wireless speaker | al_soundtouch.sh
+PC with Windows 10 OS | al_PC.sh
+
+All shell scripts run on the rpi
 
 
