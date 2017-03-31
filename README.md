@@ -26,7 +26,7 @@ The voice command is heard by Alexa, e.g. "Alexa, switch on Lichterkette". Alexa
 ha-bridge is configured to advertise the following smart home devices: "Lichterkette", "radioeins" and "Computer". The json file "devices.json" is used to configure ha-bridge.
 
 ## Waking up and shutting down the Computer
-There is no URL to switch on a Windows PC, but there is wake on LAN (wol). The script al_PC.sh uses etherwakeUnfortunately my PC does not support wol when it is completely shut down. I heard you need a power supply providing permanent power to the PCI bus even when switched off.
+There is no URL to switch on a Windows PC, but there is wake on LAN (wol). The script al_PC.sh uses etherwake. Unfortunately my PC does not support wol when it is completely shut down. 
 ## Preparing things
 - On the rpi: install the Raspbian Jessie OS and [ha-bridge](https://github.com/bwssytems/ha-bridge) as described on their homepages. Execute " sudo apt install etherwake".  
 ## Bash shell scripts used
