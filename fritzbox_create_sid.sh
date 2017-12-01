@@ -9,7 +9,7 @@
 # 30,0 * * * * /home/pi/fritzbox_create_sid.sh
 
 # source in confidential variables like $USER and $PASSWD
-. /home/pi/alde/variables.txt
+. /home/pi/alde/variables.py
 
 # more variables
 fbox="https://fritz.box:40306" 

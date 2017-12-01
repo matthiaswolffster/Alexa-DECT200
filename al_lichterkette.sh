@@ -3,7 +3,7 @@
 # concepts:
 # https://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/AHA-HTTP-Interface.pdf
 
-. /home/pi/alde/variables.txt
+. /home/pi/alde/variables.py
 
 fbox="https://fritz.box:40306" 
 

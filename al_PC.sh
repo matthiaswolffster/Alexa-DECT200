@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /home/pi/alde/variables.txt
+. /home/pi/alde/variables.py
 
 # convert $1 to lowercase and assign to $COMMAND
 declare -l COMMAND=$1

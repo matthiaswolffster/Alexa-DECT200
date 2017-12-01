@@ -6,7 +6,7 @@
 # al_soundtouch.sh dim <percentage>
 # based on: https://community.bose.com/t5/SoundTouch-Speakers/Alarm-Clock-function-via-Raspberry-Pi/td-p/44575
 
-. /home/pi/alde/variables.txt
+. /home/pi/alde/variables.py
 
 # Maximallautstärke 40 ist gut erträglich
 MAXVOL=40
