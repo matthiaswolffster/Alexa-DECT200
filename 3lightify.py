@@ -19,7 +19,7 @@ if "errorCode" in s:
 #print error5003
 
 if error5003==1:
-  r=requests.post('https://eu.lightify-api.org/lightify/services/session','{"username" : "matthiaswolffster@gmail.com", "password" : "nokia2110", "serialNumber" : "OSR017C25F7"}',headers={'Content-Type': 'application/json'})
+  r=requests.post('https://eu.lightify-api.org/lightify/services/session','{"username" : "XXX@gmail.com", "password" : "YYY", "serialNumber" : "OSR017C25F7"}',headers={'Content-Type': 'application/json'})
   s=r.json()
   myToken = s['securityToken']
   with open("/tmp/lightifyToken.txt", "w") as text_file:

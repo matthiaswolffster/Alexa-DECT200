@@ -1,5 +1,5 @@
 #Quelle: https://www.elv.de/topic/osram-lightify-ccu2.html
-curl -s -X POST -H 'Content-Type: application/json' -d '{"username" : "matthiaswolffster@gmail.com", "password" : "nokia2110", "serialNumber" : "OSR017C25F7"}' https://eu.lightify-api.org/lightify/services/session
+curl -s -X POST -H 'Content-Type: application/json' -d '{"username" : "XXX@gmail.com", "password" : "YYY", "serialNumber" : "OSR017C25F7"}' https://eu.lightify-api.org/lightify/services/session
 #{"userId":"182137","securityToken":"182137-IbfHld75QgmOc6fAsafS"}
 
 
