@@ -5,7 +5,7 @@ This is a collection of
 - bash shell scripts, 
 - a json file for ha-bridge 
 - raspberry pi (rpi) config files
-- an [EventGhost](http://www.eventghost.org/) xml file
+
 
 ## The environment
 - Amazon Echo smart speaker
