@@ -1,37 +1,32 @@
 #!/usr/bin/env python
+import os
 import json
-from pprint import pprint
+#from pprint import pprint
+from tempfile import gettempdir
 import requests
-from variables import *
+from variables import MAIL, PASSWD, SERIALNUMBER
 
-url='https://eu.lightify-api.org/lightify/services/devices'
-r = requests.get(url)
-#print r.text
+def getlightifytoken():
+    """Holt das Lightify Token und speichert es in einer Datei."""
+    myurl = 'https://eu.lightify-api.org/lightify/services/'
+    myrequest = requests.get(myurl + "devices")
 
-#{"errorCode":5003,"errorMessage":"Invalid Security Token"}
+    req_answer = json.loads(myrequest.text)
+    error5003 = 0
+    if "errorCode" in req_answer:
+        if str(req_answer['errorCode']) == "5003":
+            error5003 = 1
 
-s=json.loads(r.text)
-error5003=0
-if "errorCode" in s:
-  #print "errorcode in s!"
-  if str(s['errorCode'])=="5003":
-    #print "error 5003!"
-    error5003=1
-#print error5003
+    if error5003 == 1:
+        poststring = '{"username" : "' + MAIL + '", "password" : "' + PASSWD + '", "serialNumber" : "' + SERIALNUMBER + '"}'
+        myrequest = \
+        requests.post(myurl + "session",
+                      poststring,
+                      headers={'Content-Type': 'application/json'})
+        req_answer = myrequest.json()
+        mytoken = req_answer['securityToken']
+        print "Tempfile: " + os.path.join(gettempdir(), "lightifyToken.txt")
+        with open(os.path.join(gettempdir(), "lightifyToken.txt"), "w") as text_file:
+            text_file.write("{0}".format(mytoken))
 
-if error5003==1:
-  r=requests.post('https://eu.lightify-api.org/lightify/services/session','{"username" : "XXX@gmail.com", "password" : "YYY", "serialNumber" : "SERIALNUMBER"}',headers={'Content-Type': 'application/json'})
-  s=r.json()
-  myToken = s['securityToken']
-  with open("/tmp/lightifyToken.txt", "w") as text_file:
-      text_file.write("{0}".format(myToken))
-  #print myToken
-#if str(s['dfdfdf'])=="5003":
-#  print "error"
-  #
-
-#for s in json.loads(r.text):
-#  print "deleting ", s['name']
-#  url='http://127.0.0.1/api/devices/' + str(s['id'])
-#  r2 = requests.delete(url)
-#  print(r2.json())
+getlightifytoken()
